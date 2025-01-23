@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "ATarget.hpp"
 
 class ATarget;
 
@@ -12,8 +13,8 @@ class ASpell
         ASpell& operator=(ASpell const& aspell);
         virtual ~ASpell();
 
-        std::string const &getName() const;
-        std::string const &getEffects() const;
+        std::string const& getName() const;
+        std::string const& getEffects() const;
 
         virtual ASpell* clone() const = 0;
 
@@ -23,5 +24,3 @@ class ASpell
         std::string name_;
         std::string effects_;
 };
-
-#include "ATarget.hpp"

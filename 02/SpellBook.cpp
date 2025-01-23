@@ -19,7 +19,6 @@ void SpellBook::learnSpell(ASpell *spell)
 
 void SpellBook::forgetSpell(std::string const &spellName)
 {
-    // if no auto 
     std::map<std::string, ASpell *>::iterator it = spells_.find(spellName);
     if (it != spells_.end())
     {

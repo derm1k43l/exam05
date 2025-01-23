@@ -16,13 +16,6 @@ Warlock::~Warlock()
     spells_.clear();
 }
 
-Warlock& Warlock::operator=(Warlock const& warlock)
-{
-    name_ = warlock.name_;
-    title_ = warlock.title_;
-    return *this;
-}
-
 std::string const& Warlock::getName() const
 {
     return name_;

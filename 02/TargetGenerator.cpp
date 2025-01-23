@@ -11,8 +11,6 @@ TargetGenerator::~TargetGenerator()
     targets_.clear();
 }
 
-// if i can compile then just make it and void other and return *this 
-
 TargetGenerator &TargetGenerator::operator=(TargetGenerator const &other) 
 {
     (void)other;
@@ -47,4 +45,3 @@ TargetGenerator::TargetGenerator(TargetGenerator const &other)
 {
     *this = other;
 }
-

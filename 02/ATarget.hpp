@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "ASpell.hpp"
 
 class ASpell;
 
@@ -21,5 +22,3 @@ class ATarget
     protected:
         std::string type_;
 };
-
-#include "ASpell.hpp"
