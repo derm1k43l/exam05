@@ -9,8 +9,8 @@ class ASpell
     public:
         ASpell();
         ASpell(std::string const& name, std::string const& effects);
-        ASpell(ASpell const& aspell);
-        ASpell& operator=(ASpell const& aspell);
+        ASpell(ASpell const& other);
+        ASpell& operator=(ASpell const& other);
         virtual ~ASpell();
 
         std::string const& getName() const;
@@ -21,6 +21,6 @@ class ASpell
         void launch(ATarget const& target) const;
 
     private:
-        std::string name_;
-        std::string effects_;
+        std::string name;
+        std::string effects;
 };

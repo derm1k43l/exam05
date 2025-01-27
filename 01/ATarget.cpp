@@ -12,7 +12,7 @@ ATarget::ATarget(ATarget const& atarget)
 ATarget& ATarget::operator=(ATarget const& atarget)
 {
     if (this != &atarget)
-        this->type_ = atarget.type_;
+        type_ = atarget.type_;
     return *this;
 }
 
@@ -20,10 +20,10 @@ ATarget::~ATarget() {}
 
 std::string const &ATarget::getType() const
 {
-    return this->type_;
+    return type_;
 }
 
 void ATarget::getHitBySpell(ASpell const& aspell) const
 {
-    std::cout << this->type_ << " has been " << aspell.getEffects() << "!" << std::endl;
+    std::cout << type_ << " has been " << aspell.getEffects() << "!" << std::endl;
 }
