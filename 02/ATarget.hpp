@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 #include "ASpell.hpp"
 
 class ASpell;
@@ -9,15 +10,15 @@ class ATarget
     public:
         ATarget();
         ATarget(std::string const& type);
-        ATarget(ATarget const& atarget);
-        ATarget& operator=(ATarget const& atarget);
         virtual ~ATarget();
+        ATarget(ATarget const& other);
+        ATarget& operator=(ATarget const& other);
 
-        std::string const &getType() const;
+        std::string const& getType() const;
 
         virtual ATarget* clone() const = 0;
 
-        void getHitBySpell(ASpell const& aspell) const;
+        void getHitBySpell(ASpell const& spell) const;
 
     protected:
         std::string type_;

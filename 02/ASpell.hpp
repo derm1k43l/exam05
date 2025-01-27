@@ -1,6 +1,7 @@
 #pragma once
-#include "ATarget.hpp"
 #include <iostream>
+#include <string>
+#include "ATarget.hpp"
 
 class ATarget;
 
@@ -8,10 +9,10 @@ class ASpell
 {
     public:
         ASpell();
-        ASpell(std::string const& name, std::string const& effects);
-        ASpell(ASpell const& aspell);
-        ASpell& operator=(ASpell const& aspell);
+        ASpell(std::string const& name, std::string const& title);
         virtual ~ASpell();
+        ASpell(ASpell const& other);
+        ASpell& operator=(ASpell const& other);
 
         std::string const& getName() const;
         std::string const& getEffects() const;
@@ -20,7 +21,7 @@ class ASpell
 
         void launch(ATarget const& target) const;
 
-    private:
-        std::string name_;
-        std::string effects_;
+    protected:
+        std::string name;
+        std::string effects;
 };

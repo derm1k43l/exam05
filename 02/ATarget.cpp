@@ -3,16 +3,16 @@
 ATarget::ATarget() {}
 
 ATarget::ATarget(std::string const& type) : type_(type) {}
-
-ATarget::ATarget(ATarget const& atarget)
+        
+ATarget::ATarget(ATarget const& other)
 {
-    *this = atarget;
+    *this = other;
 } 
 
-ATarget& ATarget::operator=(ATarget const& atarget)
+ATarget& ATarget::operator=(ATarget const& other)
 {
-    if (this != &atarget)
-        this->type_ = atarget.type_;
+    if (this != &other)
+        type_ = other.type_;
     return *this;
 }
 
@@ -20,10 +20,10 @@ ATarget::~ATarget() {}
 
 std::string const &ATarget::getType() const
 {
-    return this->type_;
+    return type_;
 }
 
-void ATarget::getHitBySpell(ASpell const& aspell) const
+void ATarget::getHitBySpell(ASpell const& spell) const
 {
-    std::cout << this->type_ << " has been " << aspell.getEffects() << "!" << std::endl;
+    std::cout << type_ << " has been " << spell.getEffects() << "!" << std::endl;
 }

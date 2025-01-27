@@ -4,33 +4,23 @@ TargetGenerator::TargetGenerator() {}
 
 TargetGenerator::~TargetGenerator()
 {
-    for (std::map<std::string, ATarget *>::iterator it = targets_.begin(); it != targets_.end(); it++)
-    {
+    std::map<std::string, ATarget*>::iterator it = targets_.begin();
+    for(; it != targets_.end(); it++)
         delete it->second;
-    }
     targets_.clear();
 }
 
-TargetGenerator &TargetGenerator::operator=(TargetGenerator const &other) 
-{
-    (void)other;
-    return *this;
-}
-
-void TargetGenerator::learnTargetType(ATarget *target)
+void TargetGenerator::learnTargetType(ATarget* target)
 {
     if (target)
-        targets_[target->getType()] = target->clone();
+        targets_.insert(std::pair<std::string, ATarget *>(target->getType(), target->clone()));
 }
 
-void TargetGenerator::forgetTargetType(std::string const &targetType)
+void TargetGenerator::forgetTargetType(std::string const& type)
 {
-    std::map<std::string, ATarget *>::iterator it = targets_.find(targetType);
-    if (it != targets_.end())
-    {
-        delete it->second;
-        targets_.erase(it);
-    }
+    if (targets_.find(type) != targets_.end())
+        delete targets_[type];
+    targets_.erase(type);
 }
 
 ATarget *TargetGenerator::createTarget(std::string const &targetType)
@@ -39,9 +29,4 @@ ATarget *TargetGenerator::createTarget(std::string const &targetType)
     if (it != targets_.end())
         return it->second->clone();
     return nullptr;
-}
-
-TargetGenerator::TargetGenerator(TargetGenerator const &other)
-{
-    *this = other;
 }

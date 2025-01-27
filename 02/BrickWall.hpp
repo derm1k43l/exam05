@@ -3,8 +3,9 @@
 
 class BrickWall : public ATarget
 {
-public:
-    BrickWall();
-    virtual ~BrickWall();
-    virtual ATarget *clone() const;
+    public:
+        BrickWall();
+        ~BrickWall();
+
+        virtual ATarget * clone () const;
 };
