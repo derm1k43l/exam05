@@ -1,10 +1,9 @@
 #include "Warlock.hpp"
 
 Warlock::Warlock(std::string const& name, std::string const& title)
+    : name_(name), title_(title) 
 {
-    this->name_ = name;
-    this->title_ = title;
-    std::cout << this->name_ << ": This looks like another boring day." << std::endl;
+    std::cout << name << ": This looks like another boring day." << std::endl;
 }
 
 Warlock::~Warlock()

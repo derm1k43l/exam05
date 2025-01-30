@@ -22,12 +22,12 @@ ASpell& ASpell::operator=(ASpell const& other)
 
 ASpell::~ASpell() {}
 
-std::string const &ASpell::getName() const
+std::string const& ASpell::getName() const
 {
     return name;
 }
 
-std::string const &ASpell::getEffects() const
+std::string const& ASpell::getEffects() const
 {
     return effects;
 }

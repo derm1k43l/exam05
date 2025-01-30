@@ -13,7 +13,7 @@ class ATarget
         ATarget& operator=(ATarget const& atarget);
         virtual ~ATarget();
 
-        std::string const &getType() const;
+        std::string const& getType() const;
 
         virtual ATarget* clone() const = 0;
 

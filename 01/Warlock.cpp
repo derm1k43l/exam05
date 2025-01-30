@@ -9,8 +9,8 @@ Warlock::Warlock(std::string const& name, std::string const& title)
 Warlock::~Warlock()
 {
     std::cout << name_ << ": My job here is done!" << std::endl;
-    std::map<std::string, ASpell*>::iterator it = this->spells_.begin();
-    for (; it != this->spells_.end(); it++)
+    std::map<std::string, ASpell*>::iterator it = spells_.begin();
+    for (; it != spells_.end(); it++)
         delete it->second;
     spells_.clear();
 }
