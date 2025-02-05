@@ -23,7 +23,7 @@ void SpellBook::forgetSpell(std::string const& spellName)
     spells_.erase(spellName);
 }
 
-ASpell * SpellBook::createSpell(std::string const& spellName)
+ASpell* SpellBook::createSpell(std::string const& spellName)
 {
     if (spells_.find(spellName) != spells_.end())
         return spells_[spellName];

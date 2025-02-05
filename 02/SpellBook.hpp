@@ -11,7 +11,7 @@ class SpellBook
         void learnSpell(ASpell* spell);
         void forgetSpell(std::string const& spellName);
 
-        ASpell *createSpell(std::string const& spellName);
+        ASpell* createSpell(std::string const& spellName);
 
     private:
         std::map<std::string, ASpell *> spells_;

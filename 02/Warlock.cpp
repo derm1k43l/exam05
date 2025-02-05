@@ -40,7 +40,7 @@ void Warlock::forgetSpell(std::string const& spellName)
     spells_.forgetSpell(spellName);
 }
 
-void Warlock::launchSpell(std::string const& spellName, ATarget const & target)
+void Warlock::launchSpell(std::string const& spellName, ATarget const& target)
 {
     if (spells_.createSpell(spellName))
         spells_.createSpell(spellName)->launch(target);

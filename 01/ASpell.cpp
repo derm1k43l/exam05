@@ -3,7 +3,7 @@
 ASpell::ASpell() {}
 
 ASpell:: ASpell(std::string const& name, std::string const& effect) 
-    : name(name), effects(effect) { }
+    : name(name), effects(effect) {}
 
 ASpell::ASpell(ASpell const& other)
 {

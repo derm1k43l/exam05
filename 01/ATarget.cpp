@@ -18,7 +18,7 @@ ATarget& ATarget::operator=(ATarget const& atarget)
 
 ATarget::~ATarget() {}
 
-std::string const &ATarget::getType() const
+std::string const& ATarget::getType() const
 {
     return type_;
 }
