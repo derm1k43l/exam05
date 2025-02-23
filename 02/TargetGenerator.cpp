@@ -28,5 +28,5 @@ ATarget *TargetGenerator::createTarget(std::string const& targetType)
     std::map<std::string, ATarget *>::iterator it = targets_.find(targetType);
     if (it != targets_.end())
         return it->second->clone();
-    return nullptr;
+    return NULL;
 }

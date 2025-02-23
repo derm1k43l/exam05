@@ -27,5 +27,5 @@ ASpell* SpellBook::createSpell(std::string const& spellName)
 {
     if (spells_.find(spellName) != spells_.end())
         return spells_[spellName];
-    return nullptr;
+    return NULL;
 }

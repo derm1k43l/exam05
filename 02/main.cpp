@@ -31,3 +31,6 @@ int main()
   richard.launchSpell("Polymorph", *wall);
   richard.launchSpell("Fireball", *wall);
 }
+
+
+// clang++ -Wall -Wextra -Werror -std=c++98 main.cpp Warlock.cpp Fwoosh.cpp Dummy.cpp ATarget.cpp ASpell.cpp Polymorph.cpp BrickWall.cpp TargetGenerator.cpp Fireball.cpp SpellBook.cpp 
